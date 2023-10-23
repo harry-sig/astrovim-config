@@ -69,6 +69,10 @@ return {
   -- augroups/autocommands and custom filetypes also this just pure lua so
   -- anything that doesn't fit in the normal config locations above can go here
   polish = function()
+    vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
+      pattern = {"*.go"},
+      command = "setlocal shiftwidth=8 tabstop=8 softtabstop=8 noexpandtab"
+    })
     -- Set up custom filetypes
     -- vim.filetype.add {
     --   extension = {

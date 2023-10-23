@@ -18,6 +18,7 @@ return {
     --   desc = "Previous buffer",
     -- },
 
+    ["<leader>T"] = { name="Run Tests" },
     -- mappings seen under group name "Buffer"
     ["<leader>bD"] = {
       function()
